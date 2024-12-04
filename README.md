@@ -1,6 +1,7 @@
 <h2>Profile các bạn nhóm 5</h2>
 <ul>
 <li> Xin chào các bạn minh là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ
+<image src="">
 <li> Thông tin cá nhân
     <ol>
     <li>Họ và tên: Nguyễn Hồng Ngọc</li>
