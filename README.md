@@ -8,7 +8,7 @@
     <li>Trường trung học phổ thông Chuyên Bến Tre</li>
     <li>Lớp: 12 Lý</li>
     <li>Giới tính: Nữ</li> 
-    <li>Cân nặng: 45kg</li>
+    <li>Cân nặng: 41kg</li>
     <li>Chiều cao: 1,54m</li>
     </ol>
 </li>
