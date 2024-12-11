@@ -181,22 +181,22 @@
     <!-- Nội dung chính đầu tiên -->
     <div class="section first-section">
       <div class="image">
-        <img src="1.jpg" alt="Ảnh 1">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 1">
       </div>
       <div class="text-container">
-        <div class="title">Sở Thích Của Tôi</div>
-        <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ.</div>
+        <div class="title">Thông tin cá nhân</div>
+        <div class="text">Hiện tại mình học lớp 12 Lý, trường THPT Chuyên Bến Tre. Mình nặng 41kg và cao 1,55m</div>
       </div>
     </div>
 
     <!-- Nội dung chính thứ 2 -->
     <div class="section second-section">
       <div class="text-container">
-        <div class="title">Những Điều Tôi Thích Làm</div>
-        <div class="text">Chữ bên trái, ảnh bên phải</div>
+        <div class="title">Nguyện vọng tương lai</div>
+        <div class="text">Mình chọn thi khối Khoa học tự nhiên, nguyện vọng 1 là ngành Kinh tế đối ngoại của Trường đại học Ngoại Thương</div>
       </div>
       <div class="image">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 2">
+        <img src="1.jpg" alt="Ảnh 2">
       </div>
     </div>
 
