@@ -58,12 +58,13 @@
 </body>
 
 
-<!DOCTYPE html>
+
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang Web Của Tôi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -100,7 +101,7 @@
       text-align: right;
       font-size: 24px;
       font-weight: bold;
-      color: #003366; /* Màu xanh dương đậm */
+      color: #003366; /* Màu xanh dương đậm cho nội dung */
     }
 
     .left-image-right-text .image {
@@ -111,8 +112,10 @@
 
     .left-image-right-text img {
       width: 100%;
-      height: auto;
-      transition: opacity 1s ease;
+      height: 300px; /* Thiết lập chiều cao cố định */
+      object-fit: cover; /* Giữ tỷ lệ ảnh */
+      opacity: 0; /* Ảnh bắt đầu với độ mờ */
+      transition: opacity 1s ease; /* Hiệu ứng mờ dần */
     }
 
     /* Chữ bên trái, ảnh bên phải */
@@ -128,7 +131,7 @@
       text-align: left;
       font-size: 24px;
       font-weight: bold;
-      color: #003366; /* Màu xanh dương đậm */
+      color: #003366; /* Màu xanh dương đậm cho nội dung */
     }
 
     .right-image-left-text .image {
@@ -139,21 +142,39 @@
 
     .right-image-left-text img {
       width: 100%;
-      height: auto;
-      transition: opacity 1s ease;
+      height: 300px; /* Thiết lập chiều cao cố định */
+      object-fit: cover; /* Giữ tỷ lệ ảnh */
+      opacity: 0; /* Ảnh bắt đầu với độ mờ */
+      transition: opacity 1s ease; /* Hiệu ứng mờ dần */
     }
 
-    /* Chuyển đổi ảnh */
-    @keyframes changeImage {
-      0% { opacity: 0; }
-      25% { opacity: 1; }
-      50% { opacity: 0; }
-      75% { opacity: 1; }
-      100% { opacity: 0; }
+    /* Tiêu đề màu đỏ */
+    .title {
+      color: red;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Giới thiệu khái quát bản thân */
+    .intro {
+      font-family: 'Lora', serif; /* Font chữ Lora */
+      font-size: 20px;
+      text-align: center;
+      color: #006400; /* Màu xanh lá đậm */
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
+
+  <div class="title">Trang Web Của Tôi</div>
+
+  <!-- Giới thiệu bản thân -->
+  <div class="intro">
+    Xin chào! Tôi là Hồng Ngọc. Tôi yêu thích việc tìm hiểu lịch sử, xem phim và nghe nhạc. Hãy cùng khám phá những điều thú vị về tôi qua các phần sau.
+  </div>
 
   <div class="container">
     <div class="section left-image-right-text">
@@ -186,10 +207,24 @@
     function changeImages() {
       // Thay đổi ảnh bên trái và bên phải
       images1.forEach((img, index) => {
-        document.querySelector(img).style.display = (index === imageIndex1) ? "block" : "none";
+        const image = document.querySelector(img);
+        if (index === imageIndex1) {
+          image.style.display = "block";
+          image.style.opacity = 1;  // Đưa ảnh vào trạng thái hiện lên
+        } else {
+          image.style.opacity = 0;  // Ảnh mờ dần
+          setTimeout(() => { image.style.display = "none"; }, 1000);  // Ẩn ảnh sau khi mờ dần
+        }
       });
       images2.forEach((img, index) => {
-        document.querySelector(img).style.display = (index === imageIndex2) ? "block" : "none";
+        const image = document.querySelector(img);
+        if (index === imageIndex2) {
+          image.style.display = "block";
+          image.style.opacity = 1;  // Đưa ảnh vào trạng thái hiện lên
+        } else {
+          image.style.opacity = 0;  // Ảnh mờ dần
+          setTimeout(() => { image.style.display = "none"; }, 1000);  // Ẩn ảnh sau khi mờ dần
+        }
       });
 
       imageIndex1 = (imageIndex1 + 1) % 4;
@@ -202,7 +237,6 @@
 
 </body>
 </html>
-
 
 
 
