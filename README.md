@@ -105,14 +105,11 @@
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-      position: relative;
     }
 
     .first-section .image {
       flex: 1;
       text-align: center;
-      position: relative;
-      width: 50%; /* Điều chỉnh kích thước ảnh */
     }
 
     .first-section .text-container {
@@ -139,14 +136,11 @@
       justify-content: flex-end;
       align-items: center;
       width: 100%;
-      position: relative;
     }
 
     .second-section .image {
       flex: 1;
       text-align: center;
-      position: relative;
-      width: 50%; /* Điều chỉnh kích thước ảnh */
     }
 
     .second-section .text-container {
@@ -169,39 +163,9 @@
 
     /* Căn chỉnh ảnh */
     .image img {
-      width: 100%;
+      width: 80%;
       height: auto;
       border-radius: 8px;
-      position: absolute;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    /* Chuyển đổi ảnh cho mỗi phần */
-    .first-section .image img:nth-child(1) {
-      animation: changeImage 6s infinite;
-    }
-    .first-section .image img:nth-child(2) {
-      animation: changeImage 6s infinite;
-      animation-delay: 3s; /* Ảnh thứ 2 sẽ đổi sau 3 giây */
-    }
-
-    .second-section .image img:nth-child(1) {
-      animation: changeImage 6s infinite;
-    }
-    .second-section .image img:nth-child(2) {
-      animation: changeImage 6s infinite;
-      animation-delay: 3s; /* Ảnh thứ 2 sẽ đổi sau 3 giây */
-    }
-
-    /* Định nghĩa hiệu ứng chuyển ảnh */
-    @keyframes changeImage {
-      0%, 50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
     }
 
   </style>
@@ -218,7 +182,6 @@
     <div class="section first-section">
       <div class="image">
         <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 1">
-        <img src="image2.jpg" alt="Ảnh 2">
       </div>
       <div class="text-container">
         <div class="title">Thông tin cá nhân</div>
@@ -233,8 +196,7 @@
         <div class="text">Mình chọn thi khối Khoa học tự nhiên, nguyện vọng 1 là ngành Kinh tế đối ngoại của Trường đại học Ngoại Thương</div>
       </div>
       <div class="image">
-        <img src="image3.jpg" alt="Ảnh 3">
-        <img src="image4.jpg" alt="Ảnh 4">
+        <img src="1.jpg" alt="Ảnh 2">
       </div>
     </div>
 
