@@ -172,7 +172,7 @@
 
   <!-- Giới thiệu bản thân -->
   <div class="intro">
-    Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ
+    Xin chào! Tôi là Hồng Ngọc. Tôi yêu thích việc tìm hiểu lịch sử, xem phim và nghe nhạc. Hãy cùng khám phá những điều thú vị về tôi qua các phần sau.
   </div>
 
   <div class="container">
@@ -185,14 +185,7 @@
         <img src="3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
         <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image4" alt="Ảnh 4" style="display: none;">
       </div>
-      <div class="text"><ol>
-    <li>Họ và tên: Nguyễn Hồng Ngọc</li>
-    <li>Trường trung học phổ thông Chuyên Bến Tre</li>
-    <li>Lớp: 12 Lý</li>
-    <li>Giới tính: Nữ</li> 
-    <li>Cân nặng: 41kg</li>
-    <li>Chiều cao: 1,54m</li>
-    </ol>
+      <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ</div>
     </div>
 
     <!-- Phần 2: Chữ bên trái, ảnh bên phải -->
