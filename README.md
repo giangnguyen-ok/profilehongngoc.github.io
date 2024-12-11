@@ -159,20 +159,20 @@
     <div class="section left-image-right-text">
       <div class="image">
         <img src="1.jpg" id="image1" alt="Ảnh 1">
-        <img src="image2.jpg" id="image2" alt="Ảnh 2" style="display: none;">
-        <img src="image3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
-        <img src="image4.jpg" id="image4" alt="Ảnh 4" style="display: none;">
+        <img src="2.jpg" id="image2" alt="Ảnh 2" style="display: none;">
+        <img src="3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image4" alt="Ảnh 4" style="display: none;">
       </div>
-      <div class="text">Chữ bên phải, ảnh bên trái</div>
+      <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ</div>
     </div>
 
     <div class="section right-image-left-text">
       <div class="text">Chữ bên trái, ảnh bên phải</div>
       <div class="image">
-        <img src="image1.jpg" id="image5" alt="Ảnh 1">
-        <img src="image2.jpg" id="image6" alt="Ảnh 2" style="display: none;">
-        <img src="image3.jpg" id="image7" alt="Ảnh 3" style="display: none;">
-        <img src="image4.jpg" id="image8" alt="Ảnh 4" style="display: none;">
+        <img src="1.jpg" id="image5" alt="Ảnh 1">
+        <img src="2.jpg" id="image6" alt="Ảnh 2" style="display: none;">
+        <img src="3.jpg" id="image7" alt="Ảnh 3" style="display: none;">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image8" alt="Ảnh 4" style="display: none;">
       </div>
     </div>
   </div>
