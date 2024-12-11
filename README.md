@@ -196,20 +196,20 @@
   <div class="container">
     <!-- Dòng giới thiệu khái quát bản thân -->
     <div class="intro">
-      Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ
+      Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ.
     </div>
 
     <!-- Nội dung chính đầu tiên -->
     <div class="section first-section">
       <div class="image">
-        <img src="1.jpg" alt="Ảnh 1">
-        <img src="2.jpg" alt="Ảnh 2">
-        <img src="3.jpg" alt="Ảnh 3">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
+        <img src="path/to/1.jpg" alt="Ảnh 1">
+        <img src="path/to/2.jpg" alt="Ảnh 2">
+        <img src="path/to/3.jpg" alt="Ảnh 3">
+        <img src="path/to/z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
       </div>
       <div class="text-container">
         <div class="title">Sở Thích Của Tôi</div>
-        <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ</div>
+        <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ.</div>
       </div>
     </div>
 
@@ -220,12 +220,16 @@
         <div class="text">Chữ bên trái, ảnh bên phải</div>
       </div>
       <div class="image">
-        <img src="1.jpg" alt="Ảnh 1">
-        <img src="2.jpg" alt="Ảnh 2">
-        <img src="3.jpg" alt="Ảnh 3">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
+        <img src="path/to/1.jpg" alt="Ảnh 1">
+        <img src="path/to/2.jpg" alt="Ảnh 2">
+        <img src="path/to/3.jpg" alt="Ảnh 3">
+        <img src="path/to/z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
       </div>
     </div>
+  </div>
+
+</body>
+</html>
 
 
 
