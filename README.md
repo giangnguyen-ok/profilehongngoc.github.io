@@ -207,7 +207,7 @@
         <img src="1.jpg" alt="Ảnh 1">
         <img src="2.jpg" alt="Ảnh 2">
         <img src="3.jpg" alt="Ảnh 3">
-        <img src="4.jpg" alt="Ảnh 4">
+        <img src="<image src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg">" alt="Ảnh 4">
       </div>
       <div class="text-container">
         <div class="title">Sở Thích Của Tôi</div>
@@ -225,7 +225,7 @@
         <img src="1.jpg" alt="Ảnh 1">
         <img src="2.jpg" alt="Ảnh 2">
         <img src="3.jpg" alt="Ảnh 3">
-        <img src="4.jpg" alt="Ảnh 4">
+        <img src="<image src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg">" alt="Ảnh 4">
       </div>
     </div>
   </div>
