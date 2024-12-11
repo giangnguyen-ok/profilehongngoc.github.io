@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +11,7 @@
       margin: 0;
       padding: 0;
     }
-    
+
     /* Pano đầu trang */
     .header {
       background-color: #000000; /* Màu đen */
@@ -18,32 +20,44 @@
       padding: 20px;
     }
 
-    /* Hiệu ứng chữ 7 màu chuyển động */
-    .rainbow-text {
+    /* Chữ với hiệu ứng bay lơ lửng */
+    .floating-text {
       font-size: 36px;
       font-weight: bold;
       background-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
       background-size: 200% 200%;
       color: transparent;
       background-clip: text;
-      display: inline;
-      animation: rainbow 3s linear infinite;
+      display: inline-block;
+      animation: rainbow 3s linear infinite, float 2s ease-in-out infinite;
     }
 
-    /* Hiệu ứng chuyển động của chữ */
+    /* Hiệu ứng chữ 7 màu chuyển động */
     @keyframes rainbow {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
+    }
+
+    /* Hiệu ứng bay lơ lửng */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1 class="rainbow-text">Chào Mừng Đến Với Trang Web Của Tôi</h1>
+    <h1 class="floating-text">Chào Mừng Đến Với Trang Web Của Tôi</h1>
   </div>
 </body>
 </html>
-
 
 <h2>Profile các bạn nhóm 5</h2>
 <ul>
