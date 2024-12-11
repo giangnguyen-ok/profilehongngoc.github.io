@@ -165,7 +165,7 @@
 
     /* Căn chỉnh ảnh */
     .image img {
-      width: 80%;
+      width: 100%;
       height: auto;
       border-radius: 8px;
       position: absolute;
@@ -214,7 +214,7 @@
     <div class="section first-section">
       <div class="image">
         <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 1">
-        <img src="1.jpg" alt="Ảnh 2">
+        <img src="image2.jpg" alt="Ảnh 2">
       </div>
       <div class="text-container">
         <div class="title">Thông tin cá nhân</div>
@@ -229,8 +229,8 @@
         <div class="text">Mình chọn thi khối Khoa học tự nhiên, nguyện vọng 1 là ngành Kinh tế đối ngoại của Trường đại học Ngoại Thương</div>
       </div>
       <div class="image">
-        <img src="2.jpg" alt="Ảnh 3">
-        <img src="3.jpg" alt="Ảnh 4">
+        <img src="image3.jpg" alt="Ảnh 3">
+        <img src="image4.jpg" alt="Ảnh 4">
       </div>
     </div>
 
