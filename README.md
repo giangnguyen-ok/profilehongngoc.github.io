@@ -65,20 +65,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang Web Của Tôi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> <!-- Thêm link font Lora -->
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Lora', serif; /* Sử dụng font Lora */
       margin: 0;
       padding: 0;
+      background-color: #f8d7d7; /* Màu nền nhẹ */
     }
 
     .container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       margin: 20px;
+    }
+
+    .intro {
+      font-size: 24px;
+      color: #003366; /* Màu xanh dương đậm */
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .section {
@@ -86,160 +94,139 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
 
-    /* Chữ bên phải, ảnh bên trái */
-    .left-image-right-text {
+    /* Nội dung chính đầu tiên */
+    .first-section {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       width: 100%;
     }
 
-    .left-image-right-text .text {
+    .first-section .image {
       flex: 1;
-      text-align: right;
-      font-size: 24px;
-      font-weight: bold;
-      color: #003366; /* Màu xanh dương đậm cho nội dung */
+      text-align: center;
     }
 
-    .left-image-right-text .image {
+    .first-section .text-container {
       flex: 1;
       text-align: left;
-      max-width: 50%;
     }
 
-    .left-image-right-text img {
-      width: 100%;
-      height: 300px; /* Thiết lập chiều cao cố định */
-      object-fit: cover; /* Giữ tỷ lệ ảnh */
-      opacity: 0; /* Ảnh bắt đầu với độ mờ */
-      transition: opacity 1s ease; /* Hiệu ứng mờ dần */
-    }
-
-    /* Chữ bên trái, ảnh bên phải */
-    .right-image-left-text {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    .right-image-left-text .text {
-      flex: 1;
-      text-align: left;
-      font-size: 24px;
-      font-weight: bold;
-      color: #003366; /* Màu xanh dương đậm cho nội dung */
-    }
-
-    .right-image-left-text .image {
-      flex: 1;
-      text-align: right;
-      max-width: 50%;
-    }
-
-    .right-image-left-text img {
-      width: 100%;
-      height: 300px; /* Thiết lập chiều cao cố định */
-      object-fit: cover; /* Giữ tỷ lệ ảnh */
-      opacity: 0; /* Ảnh bắt đầu với độ mờ */
-      transition: opacity 1s ease; /* Hiệu ứng mờ dần */
-    }
-
-    /* Tiêu đề cho từng phần nội dung */
-    .section-title {
-      font-family: 'Lora', serif; /* Font chữ Lora */
+    .first-section .title {
       font-size: 28px;
-      text-align: center;
-      color: #003366; /* Màu xanh dương đậm */
-      margin-bottom: 15px;
+      font-weight: bold;
+      color: red;
+      text-align: left;
     }
 
-    /* Giới thiệu khái quát bản thân */
-    .intro {
-      font-family: 'Lora', serif; /* Font chữ Lora */
+    .first-section .text {
       font-size: 20px;
-      text-align: center;
-      color: #006400; /* Màu xanh lá đậm */
-      margin-bottom: 30px;
+      font-weight: normal;
+      color: #003366; /* Màu xanh dương đậm */
     }
+
+    /* Nội dung chính thứ 2 */
+    .second-section {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+
+    .second-section .image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .second-section .text-container {
+      flex: 1;
+      text-align: right;
+    }
+
+    .second-section .title {
+      font-size: 28px;
+      font-weight: bold;
+      color: red;
+      text-align: right;
+    }
+
+    .second-section .text {
+      font-size: 20px;
+      font-weight: normal;
+      color: #003366; /* Màu xanh dương đậm */
+    }
+
+    /* Căn chỉnh ảnh cho khổ bằng nhau */
+    .first-section .image img, .second-section .image img {
+      width: 80%;
+      height: auto;
+      border-radius: 8px;
+      display: none;
+      animation: changeImage 16s infinite; /* Mỗi chu kỳ 16s cho 4 ảnh */
+    }
+
+    /* Chuyển đổi ảnh với hiệu ứng mờ dần */
+    @keyframes changeImage {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      50% { opacity: 0; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Đảm bảo các ảnh trong phần 1 thay đổi theo chu kỳ */
+    .first-section .image img:nth-child(1) { animation-delay: 0s; }
+    .first-section .image img:nth-child(2) { animation-delay: 4s; }
+    .first-section .image img:nth-child(3) { animation-delay: 8s; }
+    .first-section .image img:nth-child(4) { animation-delay: 12s; }
+
+    /* Đảm bảo các ảnh trong phần 2 thay đổi theo chu kỳ */
+    .second-section .image img:nth-child(1) { animation-delay: 0s; }
+    .second-section .image img:nth-child(2) { animation-delay: 4s; }
+    .second-section .image img:nth-child(3) { animation-delay: 8s; }
+    .second-section .image img:nth-child(4) { animation-delay: 12s; }
   </style>
 </head>
 <body>
 
-  <!-- Giới thiệu bản thân -->
-  <div class="intro">
-    Xin chào! Tôi là Hồng Ngọc. Tôi yêu thích việc tìm hiểu lịch sử, xem phim và nghe nhạc. Hãy cùng khám phá những điều thú vị về tôi qua các phần sau.
-  </div>
-
   <div class="container">
-    <!-- Phần 1: Chữ bên phải, ảnh bên trái -->
-    <div class="section left-image-right-text">
-      <div class="section-title">Sở Thích Của Tôi</div>
-      <div class="image">
-        <img src="1.jpg" id="image1" alt="Ảnh 1">
-        <img src="2.jpg" id="image2" alt="Ảnh 2" style="display: none;">
-        <img src="3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image4" alt="Ảnh 4" style="display: none;">
-      </div>
-      <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ</div>
+    <!-- Dòng giới thiệu khái quát bản thân -->
+    <div class="intro">
+      Xin chào, mình là Hồng Ngọc. Đây là trang web cá nhân của mình, nơi mình chia sẻ một chút về bản thân và những điều mình yêu thích.
     </div>
 
-    <!-- Phần 2: Chữ bên trái, ảnh bên phải -->
-    <div class="section right-image-left-text">
-      <div class="section-title">Những Điều Tôi Thích Làm</div>
-      <div class="text">Chữ bên trái, ảnh bên phải</div>
+    <!-- Nội dung chính đầu tiên -->
+    <div class="section first-section">
       <div class="image">
-        <img src="1.jpg" id="image5" alt="Ảnh 1">
-        <img src="2.jpg" id="image6" alt="Ảnh 2" style="display: none;">
-        <img src="3.jpg" id="image7" alt="Ảnh 3" style="display: none;">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image8" alt="Ảnh 4" style="display: none;">
+        <img src="1.jpg" alt="Ảnh 1">
+        <img src="2.jpg" alt="Ảnh 2">
+        <img src="3.jpg" alt="Ảnh 3">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
+      </div>
+      <div class="text-container">
+        <div class="title">Sở Thích Của Tôi</div>
+        <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ</div>
       </div>
     </div>
-  </div>
 
-  <script>
-    let imageIndex1 = 0;
-    let imageIndex2 = 0;
-    const images1 = ["#image1", "#image2", "#image3", "#image4"];
-    const images2 = ["#image5", "#image6", "#image7", "#image8"];
+    <!-- Nội dung chính thứ 2 -->
+    <div class="section second-section">
+      <div class="text-container">
+        <div class="title">Những Điều Tôi Thích Làm</div>
+        <div class="text">Chữ bên trái, ảnh bên phải</div>
+      </div>
+      <div class="image">
+        <img src="1.jpg" alt="Ảnh 1">
+        <img src="2.jpg" alt="Ảnh 2">
+        <img src="3.jpg" alt="Ảnh 3">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
+      </div>
+    </div>
 
-    function changeImages() {
-      // Thay đổi ảnh bên trái và bên phải
-      images1.forEach((img, index) => {
-        const image = document.querySelector(img);
-        if (index === imageIndex1) {
-          image.style.display = "block";
-          image.style.opacity = 1;  // Đưa ảnh vào trạng thái hiện lên
-        } else {
-          image.style.opacity = 0;  // Ảnh mờ dần
-          setTimeout(() => { image.style.display = "none"; }, 1000);  // Ẩn ảnh sau khi mờ dần
-        }
-      });
-      images2.forEach((img, index) => {
-        const image = document.querySelector(img);
-        if (index === imageIndex2) {
-          image.style.display = "block";
-          image.style.opacity = 1;  // Đưa ảnh vào trạng thái hiện lên
-        } else {
-          image.style.opacity = 0;  // Ảnh mờ dần
-          setTimeout(() => { image.style.display = "none"; }, 1000);  // Ẩn ảnh sau khi mờ dần
-        }
-      });
-
-      imageIndex1 = (imageIndex1 + 1) % 4;
-      imageIndex2 = (imageIndex2 + 1) % 4;
-    }
-
-    // Chuyển đổi ảnh mỗi 4 giây
-    setInterval(changeImages, 4000);
-  </script>
-
-</body>
-</html>
 
 
 
