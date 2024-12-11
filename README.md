@@ -105,17 +105,20 @@
       justify-content: flex-start;
       align-items: center;
       width: 100%;
+      position: relative;
     }
 
     .first-section .image {
       flex: 1;
       text-align: center;
       position: relative;
+      z-index: 1; /* Đảm bảo ảnh không chồng lên nội dung */
     }
 
     .first-section .text-container {
       flex: 1;
       text-align: left;
+      z-index: 2; /* Đảm bảo văn bản luôn nằm trên ảnh */
     }
 
     .first-section .title {
@@ -137,17 +140,20 @@
       justify-content: flex-end;
       align-items: center;
       width: 100%;
+      position: relative;
     }
 
     .second-section .image {
       flex: 1;
       text-align: center;
       position: relative;
+      z-index: 1; /* Đảm bảo ảnh không chồng lên nội dung */
     }
 
     .second-section .text-container {
       flex: 1;
       text-align: right;
+      z-index: 2; /* Đảm bảo văn bản luôn nằm trên ảnh */
     }
 
     .second-section .title {
@@ -214,7 +220,7 @@
     <div class="section first-section">
       <div class="image">
         <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 1">
-        <img src="image2.jpg" alt="Ảnh 2">
+        <img src="1.jpg" alt="Ảnh 2">
       </div>
       <div class="text-container">
         <div class="title">Thông tin cá nhân</div>
@@ -229,8 +235,8 @@
         <div class="text">Mình chọn thi khối Khoa học tự nhiên, nguyện vọng 1 là ngành Kinh tế đối ngoại của Trường đại học Ngoại Thương</div>
       </div>
       <div class="image">
-        <img src="image3.jpg" alt="Ảnh 3">
-        <img src="image4.jpg" alt="Ảnh 4">
+        <img src="2.jpg" alt="Ảnh 3">
+        <img src="3.jpg" alt="Ảnh 4">
       </div>
     </div>
 
@@ -238,7 +244,6 @@
 
 </body>
 </html>
-
 
 
 
