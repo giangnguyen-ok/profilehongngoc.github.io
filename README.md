@@ -101,7 +101,7 @@
       text-align: right;
       font-size: 24px;
       font-weight: bold;
-      color: #003366; /* Màu xanh dương đậm cho nội dung */
+      color: #003366; /* Màu xanh dương đậm */
     }
 
     .left-image-right-text .image {
@@ -112,10 +112,8 @@
 
     .left-image-right-text img {
       width: 100%;
-      height: 300px; /* Thiết lập chiều cao cố định */
-      object-fit: cover; /* Giữ tỷ lệ ảnh */
-      opacity: 0; /* Ảnh bắt đầu với độ mờ */
-      transition: opacity 1s ease; /* Hiệu ứng mờ dần */
+      height: auto;
+      transition: opacity 1s ease;
     }
 
     /* Chữ bên trái, ảnh bên phải */
@@ -131,7 +129,7 @@
       text-align: left;
       font-size: 24px;
       font-weight: bold;
-      color: #003366; /* Màu xanh dương đậm cho nội dung */
+      color: #003366; /* Màu xanh dương đậm */
     }
 
     .right-image-left-text .image {
@@ -142,57 +140,40 @@
 
     .right-image-left-text img {
       width: 100%;
-      height: 300px; /* Thiết lập chiều cao cố định */
-      object-fit: cover; /* Giữ tỷ lệ ảnh */
-      opacity: 0; /* Ảnh bắt đầu với độ mờ */
-      transition: opacity 1s ease; /* Hiệu ứng mờ dần */
+      height: auto;
+      transition: opacity 1s ease;
     }
 
-    /* Tiêu đề màu đỏ */
-    .title {
-      color: red;
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    /* Giới thiệu khái quát bản thân */
-    .intro {
-      font-size: 20px;
-      text-align: center;
-      color: #003366; /* Màu xanh dương đậm cho phần giới thiệu */
-      margin-bottom: 30px;
+    /* Chuyển đổi ảnh */
+    @keyframes changeImage {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      50% { opacity: 0; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
 </head>
 <body>
 
-  <div class="title">Trang Web Của Tôi</div>
-
-  <!-- Giới thiệu bản thân -->
-  <div class="intro">
-    Xin chào! Tôi là Hồng Ngọc. Tôi yêu thích việc tìm hiểu lịch sử, xem phim và nghe nhạc. Hãy cùng khám phá những điều thú vị về tôi qua các phần sau.
-  </div>
-
   <div class="container">
     <div class="section left-image-right-text">
       <div class="image">
-        <img src="1.jpg" id="image1" alt="Ảnh 1">
-        <img src="2.jpg" id="image2" alt="Ảnh 2" style="display: none;">
-        <img src="3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image4" alt="Ảnh 4" style="display: none;">
+        <img src="image1.jpg" id="image1" alt="Ảnh 1">
+        <img src="image2.jpg" id="image2" alt="Ảnh 2" style="display: none;">
+        <img src="image3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
+        <img src="image4.jpg" id="image4" alt="Ảnh 4" style="display: none;">
       </div>
-      <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ</div>
+      <div class="text">Chữ bên phải, ảnh bên trái</div>
     </div>
 
     <div class="section right-image-left-text">
       <div class="text">Chữ bên trái, ảnh bên phải</div>
       <div class="image">
-        <img src="1.jpg" id="image5" alt="Ảnh 1">
-        <img src="2.jpg" id="image6" alt="Ảnh 2" style="display: none;">
-        <img src="3.jpg" id="image7" alt="Ảnh 3" style="display: none;">
-        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" id="image8" alt="Ảnh 4" style="display: none;">
+        <img src="image1.jpg" id="image5" alt="Ảnh 1">
+        <img src="image2.jpg" id="image6" alt="Ảnh 2" style="display: none;">
+        <img src="image3.jpg" id="image7" alt="Ảnh 3" style="display: none;">
+        <img src="image4.jpg" id="image8" alt="Ảnh 4" style="display: none;">
       </div>
     </div>
   </div>
@@ -206,24 +187,10 @@
     function changeImages() {
       // Thay đổi ảnh bên trái và bên phải
       images1.forEach((img, index) => {
-        const image = document.querySelector(img);
-        if (index === imageIndex1) {
-          image.style.display = "block";
-          image.style.opacity = 1;  // Đưa ảnh vào trạng thái hiện lên
-        } else {
-          image.style.opacity = 0;  // Ảnh mờ dần
-          setTimeout(() => { image.style.display = "none"; }, 1000);  // Ẩn ảnh sau khi mờ dần
-        }
+        document.querySelector(img).style.display = (index === imageIndex1) ? "block" : "none";
       });
       images2.forEach((img, index) => {
-        const image = document.querySelector(img);
-        if (index === imageIndex2) {
-          image.style.display = "block";
-          image.style.opacity = 1;  // Đưa ảnh vào trạng thái hiện lên
-        } else {
-          image.style.opacity = 0;  // Ảnh mờ dần
-          setTimeout(() => { image.style.display = "none"; }, 1000);  // Ẩn ảnh sau khi mờ dần
-        }
+        document.querySelector(img).style.display = (index === imageIndex2) ? "block" : "none";
       });
 
       imageIndex1 = (imageIndex1 + 1) % 4;
