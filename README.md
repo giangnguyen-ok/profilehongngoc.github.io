@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -54,10 +53,9 @@
 </head>
 <body>
   <div class="header">
-    <h1 class="floating-text">Chào Mừng Đến Với Trang Web Của Tôi</h1>
+    <h1 class="floating-text">NGUYỄN HỒNG NGỌC XIN CHÀO</h1>
   </div>
 </body>
-</html>
 
 <h2>Profile các bạn nhóm 5</h2>
 <ul>
