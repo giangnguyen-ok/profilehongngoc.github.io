@@ -196,7 +196,7 @@
   <div class="container">
     <!-- Dòng giới thiệu khái quát bản thân -->
     <div class="intro">
-      Xin chào, mình là Hồng Ngọc. Đây là trang web cá nhân của mình, nơi mình chia sẻ một chút về bản thân và những điều mình yêu thích.
+      Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ
     </div>
 
     <!-- Nội dung chính đầu tiên -->
