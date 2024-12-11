@@ -18,21 +18,22 @@
       padding: 20px;
     }
 
-    /* Hiệu ứng chữ 7 màu */
+    /* Hiệu ứng chữ 7 màu chuyển động */
     .rainbow-text {
       font-size: 36px;
       font-weight: bold;
       background-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
-      background-clip: text;
+      background-size: 200% 200%;
       color: transparent;
+      background-clip: text;
       display: inline;
-      animation: rainbow 5s infinite;
+      animation: rainbow 3s linear infinite;
     }
 
     /* Hiệu ứng chuyển động của chữ */
     @keyframes rainbow {
-      0% { background-position: 0% 0%; }
-      100% { background-position: 100% 100%; }
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
   </style>
 </head>
