@@ -158,7 +158,7 @@
   <div class="container">
     <div class="section left-image-right-text">
       <div class="image">
-        <img src="image1.jpg" id="image1" alt="Ảnh 1">
+        <img src="1.jpg" id="image1" alt="Ảnh 1">
         <img src="image2.jpg" id="image2" alt="Ảnh 2" style="display: none;">
         <img src="image3.jpg" id="image3" alt="Ảnh 3" style="display: none;">
         <img src="image4.jpg" id="image4" alt="Ảnh 4" style="display: none;">
