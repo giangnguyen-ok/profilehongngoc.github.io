@@ -60,7 +60,6 @@
 
 
 
-<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -162,35 +161,37 @@
       color: #003366; /* Màu xanh dương đậm */
     }
 
-    /* Căn chỉnh ảnh cho khổ bằng nhau */
-    .first-section .image img, .second-section .image img {
-      width: 80%;
+    /* Đảm bảo các ảnh trong mỗi phần thay đổi liên tục mỗi 4s */
+    .image img {
+      width: 100%;
       height: auto;
       border-radius: 8px;
-      display: none;
-      animation: changeImage 16s infinite; /* Mỗi chu kỳ 16s cho 4 ảnh */
-    }
-
-    /* Chuyển đổi ảnh với hiệu ứng mờ dần */
-    @keyframes changeImage {
-      0% { opacity: 0; }
-      25% { opacity: 1; }
-      50% { opacity: 0; }
-      75% { opacity: 1; }
-      100% { opacity: 0; }
+      display: none; /* Mặc định ẩn các ảnh */
     }
 
     /* Đảm bảo các ảnh trong phần 1 thay đổi theo chu kỳ */
-    .first-section .image img:nth-child(1) { animation-delay: 0s; }
-    .first-section .image img:nth-child(2) { animation-delay: 4s; }
-    .first-section .image img:nth-child(3) { animation-delay: 8s; }
-    .first-section .image img:nth-child(4) { animation-delay: 12s; }
+    .first-section .image img:nth-child(1) { animation: changeImage1 16s infinite; }
+    .first-section .image img:nth-child(2) { animation: changeImage1 16s infinite; animation-delay: 4s; }
+    .first-section .image img:nth-child(3) { animation: changeImage1 16s infinite; animation-delay: 8s; }
+    .first-section .image img:nth-child(4) { animation: changeImage1 16s infinite; animation-delay: 12s; }
 
     /* Đảm bảo các ảnh trong phần 2 thay đổi theo chu kỳ */
-    .second-section .image img:nth-child(1) { animation-delay: 0s; }
-    .second-section .image img:nth-child(2) { animation-delay: 4s; }
-    .second-section .image img:nth-child(3) { animation-delay: 8s; }
-    .second-section .image img:nth-child(4) { animation-delay: 12s; }
+    .second-section .image img:nth-child(1) { animation: changeImage2 16s infinite; }
+    .second-section .image img:nth-child(2) { animation: changeImage2 16s infinite; animation-delay: 4s; }
+    .second-section .image img:nth-child(3) { animation: changeImage2 16s infinite; animation-delay: 8s; }
+    .second-section .image img:nth-child(4) { animation: changeImage2 16s infinite; animation-delay: 12s; }
+
+    /* Chuyển đổi ảnh sau mỗi 4s */
+    @keyframes changeImage1 {
+      0%, 25%, 100% { opacity: 0; }
+      50%, 75% { opacity: 1; }
+    }
+
+    @keyframes changeImage2 {
+      0%, 25%, 100% { opacity: 0; }
+      50%, 75% { opacity: 1; }
+    }
+
   </style>
 </head>
 <body>
@@ -207,7 +208,7 @@
         <img src="1.jpg" alt="Ảnh 1">
         <img src="2.jpg" alt="Ảnh 2">
         <img src="3.jpg" alt="Ảnh 3">
-        <img src="<image src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg">" alt="Ảnh 4">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
       </div>
       <div class="text-container">
         <div class="title">Sở Thích Của Tôi</div>
@@ -219,19 +220,21 @@
     <div class="section second-section">
       <div class="text-container">
         <div class="title">Những Điều Tôi Thích Làm</div>
-        <div class="text">Chữ bên trái, ảnh bên phải</div>
+        <div class="text">Chữ bên trái, ảnh bên phải.</div>
       </div>
       <div class="image">
         <img src="1.jpg" alt="Ảnh 1">
         <img src="2.jpg" alt="Ảnh 2">
         <img src="3.jpg" alt="Ảnh 3">
-        <img src="<image src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg">" alt="Ảnh 4">
+        <img src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
       </div>
     </div>
+
   </div>
 
 </body>
 </html>
+
 
 
 
