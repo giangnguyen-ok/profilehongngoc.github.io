@@ -98,7 +98,7 @@
       flex-wrap: wrap;
     }
 
-    /* Nội dung chính đầu tiên */
+    /* Nội dung chính đầu tiên (chữ trái, ảnh phải) */
     .first-section {
       display: flex;
       justify-content: flex-start;
@@ -129,7 +129,7 @@
       color: #003366; /* Màu xanh dương đậm */
     }
 
-    /* Nội dung chính thứ 2 */
+    /* Nội dung chính thứ 2 (chữ phải, ảnh trái) */
     .second-section {
       display: flex;
       justify-content: flex-end;
@@ -160,22 +160,13 @@
       color: #003366; /* Màu xanh dương đậm */
     }
 
-    /* Căn chỉnh ảnh cho khổ bằng nhau */
+    /* Chuyển đổi ảnh với hiệu ứng mờ dần */
     .first-section .image img, .second-section .image img {
       width: 80%;
       height: auto;
       border-radius: 8px;
       display: none;
       animation: changeImage 16s infinite; /* Mỗi chu kỳ 16s cho 4 ảnh */
-    }
-
-    /* Chuyển đổi ảnh với hiệu ứng mờ dần */
-    @keyframes changeImage {
-      0% { opacity: 0; }
-      25% { opacity: 1; }
-      50% { opacity: 0; }
-      75% { opacity: 1; }
-      100% { opacity: 0; }
     }
 
     /* Đảm bảo các ảnh trong phần 1 thay đổi theo chu kỳ */
@@ -189,6 +180,14 @@
     .second-section .image img:nth-child(2) { animation-delay: 4s; }
     .second-section .image img:nth-child(3) { animation-delay: 8s; }
     .second-section .image img:nth-child(4) { animation-delay: 12s; }
+
+    @keyframes changeImage {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      50% { opacity: 0; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -201,15 +200,15 @@
 
     <!-- Nội dung chính đầu tiên -->
     <div class="section first-section">
+      <div class="text-container">
+        <div class="title">Sở Thích Của Tôi</div>
+        <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ.</div>
+      </div>
       <div class="image">
         <img src="path/to/1.jpg" alt="Ảnh 1">
         <img src="path/to/2.jpg" alt="Ảnh 2">
         <img src="path/to/3.jpg" alt="Ảnh 3">
         <img src="path/to/z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
-      </div>
-      <div class="text-container">
-        <div class="title">Sở Thích Của Tôi</div>
-        <div class="text">Xin chào các bạn, mình tên là Hồng Ngọc. Sở thích của mình là xem phim, nghe nhạc và ngủ.</div>
       </div>
     </div>
 
@@ -220,12 +219,13 @@
         <div class="text">Chữ bên trái, ảnh bên phải</div>
       </div>
       <div class="image">
-        <img src="path/to/1.jpg" alt="Ảnh 1">
-        <img src="path/to/2.jpg" alt="Ảnh 2">
-        <img src="path/to/3.jpg" alt="Ảnh 3">
-        <img src="path/to/z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
+        <img src="1.jpg" alt="Ảnh 1">
+        <img src="2.jpg" alt="Ảnh 2">
+        <img src="3.jpg" alt="Ảnh 3">
+        <image src="z6098482597170_f4cf723791d4f9219190285715e5820a.jpg" alt="Ảnh 4">
       </div>
     </div>
+
   </div>
 
 </body>
