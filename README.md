@@ -204,13 +204,4 @@
 
 </body>
 
-
-
-
-<li> Nguyện vọng tương lai 
-    <ol>
-    <li>Khối thi là Khoa học tự nhiên </li>
-    <li>Nguyện vọng 1 là Đại học Ngoại Thương</li>
-    </ol>
-</li>
 </html>
