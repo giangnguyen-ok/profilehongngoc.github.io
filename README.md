@@ -7,6 +7,7 @@
     h1 {
             display: none;
             }
+    
     body {
       background-color: #FAD0C4; /* Màu hồng nhạt */
       font-family: 'Arial', sans-serif;
